@@ -1,0 +1,19 @@
+nodeLinker: hoisted
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - '@expo/cli@58.1.13'
+  - '@expo/router-server@58.0.15'
+  - '@tanstack/query-async-storage-persister@5.104.5'
+  - '@tanstack/query-core@5.104.5'
+  - '@tanstack/query-persist-client-core@5.104.5'
+  - '@tanstack/react-query-persist-client@5.104.5'
+  - '@tanstack/react-query@5.104.5'
+  - expo-file-system@58.0.10
+  - expo-font@58.0.9
+  - expo@58.0.16
+  - i18next@26.5.3

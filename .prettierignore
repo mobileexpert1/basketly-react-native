@@ -1,0 +1,9 @@
+src/core/db/migrations
+ios
+android
+coverage
+pnpm-lock.yaml
+.expo
+assets
+node_modules
+.maestro
