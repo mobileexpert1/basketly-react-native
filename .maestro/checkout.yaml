@@ -1,0 +1,44 @@
+appId: com.mobileexpert1.basketly
+name: Sign in, add to cart and check out
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: sign-in-demo
+- assertVisible: Find something good
+- tapOn:
+    id: product-stoneware-mug
+- tapOn:
+    id: variant-sage
+- tapOn:
+    id: add-to-cart
+- assertVisible: Added to cart
+- back
+- tapOn: Cart
+- assertVisible: Stoneware Mug
+- tapOn:
+    id: qty-stoneware-mug-increase
+- assertVisible: 2 items
+- tapOn:
+    id: checkout-button
+- tapOn:
+    id: field-line1
+- inputText: Torstraße 1
+- tapOn:
+    id: field-postalCode
+- inputText: '10119'
+- tapOn:
+    id: field-city
+- inputText: Berlin
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: pay-button
+- tapOn:
+    id: pay-button
+- extendedWaitUntil:
+    visible:
+      id: order-confirmed
+    timeout: 10000
+- tapOn: View orders
+- assertVisible: Orders

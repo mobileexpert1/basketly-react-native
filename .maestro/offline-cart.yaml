@@ -1,0 +1,26 @@
+appId: com.mobileexpert1.basketly
+name: Cart edits made offline sync when back online
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: sign-in-demo
+- tapOn: Settings
+- tapOn:
+    id: simulate-offline-switch
+- tapOn: Shop
+- tapOn:
+    id: product-insulated-bottle
+- tapOn:
+    id: add-to-cart
+- back
+- tapOn: Cart
+- assertVisible: You are offline. Changes are saved on this device.
+- assertVisible: 1 change waiting to sync
+- tapOn: Settings
+- tapOn:
+    id: simulate-offline-switch
+- tapOn: Cart
+- assertNotVisible:
+    id: sync-banner
+- assertVisible: Insulated Bottle
